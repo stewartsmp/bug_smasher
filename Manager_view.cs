@@ -10,31 +10,14 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form1 : Form
+    public partial class Manager_view : Form
     {
-        public Form1()
+        public Manager_view()
         {
             InitializeComponent();
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void showimage()
-        {
-            Image bug_smash = Image.FromFile(Bug_Smasher_Tasker\WindowsFormsApp1);
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
         {
 
         }
