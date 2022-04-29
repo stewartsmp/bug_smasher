@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SQLite;
 using Microsoft.Data.SqlClient;
 
 namespace WindowsFormsApp1
@@ -18,7 +17,10 @@ namespace WindowsFormsApp1
         public static string username;
         public static int user_id;
         public static string role;
-        SQLiteConnection sql_lite_connection = new SQLiteConnection("Data Source = 463.db");
+        //SQLiteConnection sql_lite_connection = new SQLiteConnection("Data Source = 463.db");
+
+        // Connection to Azure Database
+        static Microsoft.Data.SqlClient.SqlConnection connectionString = new Microsoft.Data.SqlClient.SqlConnection(@"Data Source = csci455-emr.database.windows.net; Initial Catalog = csci455-emr; User ID = SuperUser; Password=Pword123!;Connect Timeout = 30; Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
 
         public Logon()
         {
@@ -44,31 +46,35 @@ namespace WindowsFormsApp1
 
             else
             {
-                sql_lite_connection.Open();
-                SQLiteCommand user_pword_valid = new SQLiteCommand(sql_lite_connection);
+                
+                //var user_pword_selectstatemetn = 
+                SqlCommand user_pword_valid = new SqlCommand();
+                
+                                
+                //SQLiteCommand user_pword_valid = new SQLiteCommand(sql_lite_connection);
                 user_pword_valid.CommandText = "SELECT EXISTS (SELECT * FROM User_Logon WHERE Username = @p1 AND Password = @p2);";
                 user_pword_valid.CommandType = CommandType.Text;
-                user_pword_valid.Parameters.Add(new SQLiteParameter("@p1", username_text.Text));
-                user_pword_valid.Parameters.Add(new SQLiteParameter("@p2", password_text.Text));
-
-                int valid = Convert.ToInt32(user_pword_valid.ExecuteScalar());
-                sql_lite_connection.Close();
+                user_pword_valid.Parameters.Add(new SqlParameter("@p1", username_text.Text));
+                user_pword_valid.Parameters.Add(new SqlParameter("@p2", password_text.Text));
+                connectionString.Open();
+                int valid = user_pword_valid.ExecuteNonQuery());
+                connectionString.Close();
                 
 
                 if (valid == 1)
                 {
                     // Assign Username
                     Logon.username = username_text.Text;
-                    sql_lite_connection.Open();
+                    connectionString.Open();
                     // Assign User ID
                     var staff_id_selectstatement = $"SELECT User_ID FROM User_Logon WHERE Username = '{Logon.username}'";
-                    SQLiteCommand staffID = new SQLiteCommand(staff_id_selectstatement, sql_lite_connection);
+                    SqlCommand staffID = new SqlCommand(staff_id_selectstatement, connectionString);
                     Logon.user_id = Convert.ToInt32(staffID.ExecuteScalar());
                     // Assign User Role
                     var staff_role_selectstatemetn = $"SELECT Role_Description FROM User_Information WHERE User_ID = {Logon.user_id}";
-                    SQLiteCommand staffRole = new SQLiteCommand(staff_role_selectstatemetn, sql_lite_connection);
+                    SqlCommand staffRole = new SqlCommand (staff_role_selectstatemetn, connectionString);
                     Logon.role = staffRole.ExecuteScalar().ToString();
-                    sql_lite_connection.Close();
+                    connectionString.Close();
                     // Switch between views based on role
                     switch (Logon.role)
                     {
