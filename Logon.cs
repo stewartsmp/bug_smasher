@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
+using Microsoft.Data.SqlClient;
 
 namespace WindowsFormsApp1
 {
@@ -51,7 +52,7 @@ namespace WindowsFormsApp1
 
                 int valid = Convert.ToInt32(user_pword_valid.ExecuteScalar());
                 sql_lite_connection.Close();
-                .
+                
 
                 if (valid == 1)
                 {
@@ -71,9 +72,15 @@ namespace WindowsFormsApp1
                     switch (Logon.role)
                     {
                         case "Developer":
+                            Staff_view sv = new Staff_view();
+                            sv.Show();
+                            this.Hide();
                             Console.WriteLine(Logon.username + " is a Developer");
                             break;
                         case "Manager":
+                            Manager_view mv = new Manager_view();
+                            mv.Show();
+                            this.Hide();
                             Console.WriteLine(Logon.username + "is a Manager");
                             break;
 
