@@ -29,7 +29,8 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Register_new_user reg_new_user = new Register_new_user();
+            reg_new_user.Show();
         }
 
         private void LOGIN_exc_Click(object sender, EventArgs e)

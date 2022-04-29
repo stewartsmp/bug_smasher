@@ -187,7 +187,7 @@ namespace WindowsFormsApp1
             this.groupBox1.Controls.Add(this.textBox3);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Location = new System.Drawing.Point(52, 54);
+            this.groupBox1.Location = new System.Drawing.Point(68, 23);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(613, 396);
             this.groupBox1.TabIndex = 15;
