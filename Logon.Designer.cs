@@ -145,6 +145,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.Reg_new_user_exc);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Logon";
             this.Text = "Login To BugSmasher";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -183,6 +183,12 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddBug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddBug.Designer.cs">
+      <DependentUpon>AddBug.cs</DependentUpon>
+    </Compile>
     <Compile Include="Register_new_user.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +215,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddBug.resx">
+      <DependentUpon>AddBug.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Manager_view.resx">
       <DependentUpon>Manager_view.cs</DependentUpon>
     </EmbeddedResource>

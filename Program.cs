@@ -19,7 +19,7 @@ namespace WindowsFormsApp1
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Logon());
-
+            /*
             try
             {
                 SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
@@ -53,7 +53,7 @@ namespace WindowsFormsApp1
                 Console.WriteLine(e.ToString());
             }
             Console.ReadLine();
-
+            */
 
 
 
