@@ -20,7 +20,8 @@ namespace WindowsFormsApp1
         public Manager_view()
         {
             InitializeComponent();
-            
+            this.Text = ($"Logged in as {manager_name_first} {manager_name_last}");
+
             /*
             // Find manager name
             connectionString.Open();
@@ -92,6 +93,10 @@ namespace WindowsFormsApp1
             DataSet employees_managed = new DataSet();
             list_box_adp.Fill(employees_managed);
             find_managed_employees.ExecuteNonQuery();
+            DataTable table = new DataTable();
+            table.Columns.Add("Last_Name", typeof(string));
+            table.Rows.Add("All");
+            employees_managed.Tables.Add(table);
             comboBox1.DataSource = employees_managed.Tables[0];
             comboBox1.DisplayMember = "Last_Name";
             //comboBox1.ValueMember = "Last_Name";
