@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp1
 {
-    partial class Staff_view
+    partial class Staff_Bugs
     {
         /// <summary>
         /// Required designer variable.
@@ -29,19 +29,16 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Staff_view));
             this.SuspendLayout();
             // 
-            // Staff_view
+            // Staff_Bugs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Staff_view";
-            this.Text = "Logged In As Staff";
-            this.Load += new System.EventHandler(this.Form2_Load);
+            this.Name = "Staff_Bugs";
+            this.Text = "Staff Bugs";
             this.ResumeLayout(false);
 
         }

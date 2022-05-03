@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="_csci455_emrDataSet3" targetNamespace="http://tempuri.org/_csci455_emrDataSet3.xsd" xmlns:mstns="http://tempuri.org/_csci455_emrDataSet3.xsd" xmlns="http://tempuri.org/_csci455_emrDataSet3.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="csci455_emrConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="csci455_emrConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsFormsApp1.Properties.Settings.GlobalReference.Default.csci455_emrConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="User Bug CountsTableAdapter" GeneratorDataComponentClassName="User_Bug_CountsTableAdapter" Name="User Bug Counts" UserDataComponentName="User Bug CountsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="csci455_emrConnectionString (Settings)" DbObjectName="[csci455-emr].dbo.[User Bug Counts]" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT First_Name, Last_Name, User_ID, Bug_Count FROM dbo.[User Bug Counts]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="First_Name" DataSetColumn="First_Name" />
+              <Mapping SourceColumn="Last_Name" DataSetColumn="Last_Name" />
+              <Mapping SourceColumn="User_ID" DataSetColumn="User_ID" />
+              <Mapping SourceColumn="Bug_Count" DataSetColumn="Bug_Count" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="_csci455_emrDataSet3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="_csci455_emrDataSet3" msprop:Generator_UserDSName="_csci455_emrDataSet3">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="User_x0020_Bug_x0020_Counts" msprop:Generator_TableClassName="User_Bug_CountsDataTable" msprop:Generator_TableVarName="tableUser_Bug_Counts" msprop:Generator_TablePropName="User_Bug_Counts" msprop:Generator_RowDeletingName="User_Bug_CountsRowDeleting" msprop:Generator_RowChangingName="User_Bug_CountsRowChanging" msprop:Generator_RowEvHandlerName="User_Bug_CountsRowChangeEventHandler" msprop:Generator_RowDeletedName="User_Bug_CountsRowDeleted" msprop:Generator_UserTableName="User Bug Counts" msprop:Generator_RowChangedName="User_Bug_CountsRowChanged" msprop:Generator_RowEvArgName="User_Bug_CountsRowChangeEvent" msprop:Generator_RowClassName="User_Bug_CountsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="First_Name" msprop:Generator_ColumnVarNameInTable="columnFirst_Name" msprop:Generator_ColumnPropNameInRow="First_Name" msprop:Generator_ColumnPropNameInTable="First_NameColumn" msprop:Generator_UserColumnName="First_Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Last_Name" msprop:Generator_ColumnVarNameInTable="columnLast_Name" msprop:Generator_ColumnPropNameInRow="Last_Name" msprop:Generator_ColumnPropNameInTable="Last_NameColumn" msprop:Generator_UserColumnName="Last_Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="User_ID" msprop:Generator_ColumnVarNameInTable="columnUser_ID" msprop:Generator_ColumnPropNameInRow="User_ID" msprop:Generator_ColumnPropNameInTable="User_IDColumn" msprop:Generator_UserColumnName="User_ID" type="xs:int" />
+              <xs:element name="Bug_Count" msprop:Generator_ColumnVarNameInTable="columnBug_Count" msprop:Generator_ColumnPropNameInRow="Bug_Count" msprop:Generator_ColumnPropNameInTable="Bug_CountColumn" msprop:Generator_UserColumnName="Bug_Count" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:User_x0020_Bug_x0020_Counts" />
+      <xs:field xpath="mstns:User_ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

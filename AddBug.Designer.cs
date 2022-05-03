@@ -29,6 +29,7 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddBug));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,9 +44,24 @@ namespace WindowsFormsApp1
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this._csci455_emrDataSet = new WindowsFormsApp1._csci455_emrDataSet();
+            this.userInformationUpdatedBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.user_Information_UpdatedTableAdapter = new WindowsFormsApp1._csci455_emrDataSetTableAdapters.User_Information_UpdatedTableAdapter();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this._csci455_emrDataSet1 = new WindowsFormsApp1._csci455_emrDataSet1();
+            this.userInformationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.user_InformationTableAdapter = new WindowsFormsApp1._csci455_emrDataSet1TableAdapters.User_InformationTableAdapter();
+            this._csci455_emrDataSet2 = new WindowsFormsApp1._csci455_emrDataSet2();
+            this.userInformationUpdatedBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.user_Information_UpdatedTableAdapter1 = new WindowsFormsApp1._csci455_emrDataSet2TableAdapters.User_Information_UpdatedTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this._csci455_emrDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userInformationUpdatedBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._csci455_emrDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userInformationBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._csci455_emrDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userInformationUpdatedBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -160,19 +176,21 @@ namespace WindowsFormsApp1
             // 
             // comboBox2
             // 
+            this.comboBox2.DataSource = this.userInformationUpdatedBindingSource;
+            this.comboBox2.DisplayMember = "User_ID";
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(186, 164);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(251, 21);
             this.comboBox2.TabIndex = 9;
+            this.comboBox2.ValueMember = "User_ID";
             // 
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
             "New",
-            "In Progress (<50% complete)",
-            "In Progress (>50% complete)",
+            "Progress",
             "Complete"});
             this.comboBox3.Location = new System.Drawing.Point(186, 39);
             this.comboBox3.Name = "comboBox3";
@@ -192,14 +210,6 @@ namespace WindowsFormsApp1
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(251, 20);
             this.dateTimePicker2.TabIndex = 12;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(186, 328);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(251, 21);
-            this.comboBox4.TabIndex = 14;
             // 
             // textBox1
             // 
@@ -223,15 +233,68 @@ namespace WindowsFormsApp1
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // _csci455_emrDataSet
+            // 
+            this._csci455_emrDataSet.DataSetName = "_csci455_emrDataSet";
+            this._csci455_emrDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // userInformationUpdatedBindingSource
+            // 
+            this.userInformationUpdatedBindingSource.DataMember = "User_Information_Updated";
+            this.userInformationUpdatedBindingSource.DataSource = this._csci455_emrDataSet;
+            // 
+            // user_Information_UpdatedTableAdapter
+            // 
+            this.user_Information_UpdatedTableAdapter.ClearBeforeFill = true;
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.DataSource = this.userInformationUpdatedBindingSource1;
+            this.comboBox5.DisplayMember = "User_ID";
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(186, 323);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(251, 21);
+            this.comboBox5.TabIndex = 17;
+            this.comboBox5.ValueMember = "User_ID";
+            // 
+            // _csci455_emrDataSet1
+            // 
+            this._csci455_emrDataSet1.DataSetName = "_csci455_emrDataSet1";
+            this._csci455_emrDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // userInformationBindingSource
+            // 
+            this.userInformationBindingSource.DataMember = "User_Information";
+            this.userInformationBindingSource.DataSource = this._csci455_emrDataSet1;
+            // 
+            // user_InformationTableAdapter
+            // 
+            this.user_InformationTableAdapter.ClearBeforeFill = true;
+            // 
+            // _csci455_emrDataSet2
+            // 
+            this._csci455_emrDataSet2.DataSetName = "_csci455_emrDataSet2";
+            this._csci455_emrDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // userInformationUpdatedBindingSource1
+            // 
+            this.userInformationUpdatedBindingSource1.DataMember = "User_Information_Updated";
+            this.userInformationUpdatedBindingSource1.DataSource = this._csci455_emrDataSet2;
+            // 
+            // user_Information_UpdatedTableAdapter1
+            // 
+            this.user_Information_UpdatedTableAdapter1.ClearBeforeFill = true;
+            // 
             // AddBug
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(484, 450);
+            this.Controls.Add(this.comboBox5);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.comboBox3);
@@ -250,6 +313,13 @@ namespace WindowsFormsApp1
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add a Bug";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.AddBug_Load);
+            ((System.ComponentModel.ISupportInitialize)(this._csci455_emrDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userInformationUpdatedBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._csci455_emrDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userInformationBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._csci455_emrDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userInformationUpdatedBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,8 +340,17 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
+        private _csci455_emrDataSet _csci455_emrDataSet;
+        private System.Windows.Forms.BindingSource userInformationUpdatedBindingSource;
+        private _csci455_emrDataSetTableAdapters.User_Information_UpdatedTableAdapter user_Information_UpdatedTableAdapter;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private _csci455_emrDataSet1 _csci455_emrDataSet1;
+        private System.Windows.Forms.BindingSource userInformationBindingSource;
+        private _csci455_emrDataSet1TableAdapters.User_InformationTableAdapter user_InformationTableAdapter;
+        private _csci455_emrDataSet2 _csci455_emrDataSet2;
+        private System.Windows.Forms.BindingSource userInformationUpdatedBindingSource1;
+        private _csci455_emrDataSet2TableAdapters.User_Information_UpdatedTableAdapter user_Information_UpdatedTableAdapter1;
     }
 }

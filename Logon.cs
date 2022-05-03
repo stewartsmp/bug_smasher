@@ -58,8 +58,10 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Register_new_user reg_new_user = new Register_new_user();
             reg_new_user.Show();
+
         }
 
         private void LOGIN_exc_Click(object sender, EventArgs e)
@@ -114,7 +116,7 @@ namespace WindowsFormsApp1
                             
                             sv.Show();
                             this.Hide();
-                            Console.WriteLine(Logon.username + " is a Developer");
+                            //Console.WriteLine(Logon.username + " is a Developer");
                             break;
                         case "Manager":
                             welcome_message();
@@ -122,7 +124,7 @@ namespace WindowsFormsApp1
                             
                             mv.Show();
                             this.Hide();
-                            Console.WriteLine(Logon.username + " is a Manager");
+                            //Console.WriteLine(Logon.username + " is a Manager");
                             break;
 
                     }

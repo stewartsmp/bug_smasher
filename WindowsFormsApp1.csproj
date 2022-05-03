@@ -36,6 +36,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Aspose.PDF, Version=22.4.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>packages\Aspose.PDF.22.4.0\lib\net4.0\Aspose.PDF.dll</HintPath>
+    </Reference>
     <Reference Include="Azure.Core, Version=1.6.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
       <HintPath>packages\Azure.Core.1.6.0\lib\net461\Azure.Core.dll</HintPath>
     </Reference>
@@ -189,6 +192,24 @@
     <Compile Include="AddBug.Designer.cs">
       <DependentUpon>AddBug.cs</DependentUpon>
     </Compile>
+    <Compile Include="AlterBug_Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlterBug_Manager.Designer.cs">
+      <DependentUpon>AlterBug_Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlterBug_Staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlterBug_Staff.Designer.cs">
+      <DependentUpon>AlterBug_Staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staff_Bugs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff_Bugs.Designer.cs">
+      <DependentUpon>Staff_Bugs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Register_new_user.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,8 +236,34 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="_csci455_emrDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_csci455_emrDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_csci455_emrDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_csci455_emrDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_csci455_emrDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_csci455_emrDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_csci455_emrDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_csci455_emrDataSet3.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddBug.resx">
       <DependentUpon>AddBug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlterBug_Manager.resx">
+      <DependentUpon>AlterBug_Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlterBug_Staff.resx">
+      <DependentUpon>AlterBug_Staff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manager_view.resx">
       <DependentUpon>Manager_view.cs</DependentUpon>
@@ -226,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Register_new_user.resx">
       <DependentUpon>Register_new_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff_Bugs.resx">
+      <DependentUpon>Staff_Bugs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Staff_view.resx">
       <DependentUpon>Staff_view.cs</DependentUpon>
@@ -249,6 +299,50 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="_csci455_emrDataSet.xsc">
+      <DependentUpon>_csci455_emrDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_csci455_emrDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_csci455_emrDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_csci455_emrDataSet.xss">
+      <DependentUpon>_csci455_emrDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_csci455_emrDataSet1.xsc">
+      <DependentUpon>_csci455_emrDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="_csci455_emrDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_csci455_emrDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_csci455_emrDataSet1.xss">
+      <DependentUpon>_csci455_emrDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="_csci455_emrDataSet2.xsc">
+      <DependentUpon>_csci455_emrDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="_csci455_emrDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_csci455_emrDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_csci455_emrDataSet2.xss">
+      <DependentUpon>_csci455_emrDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="_csci455_emrDataSet3.xsc">
+      <DependentUpon>_csci455_emrDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="_csci455_emrDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_csci455_emrDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_csci455_emrDataSet3.xss">
+      <DependentUpon>_csci455_emrDataSet3.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
