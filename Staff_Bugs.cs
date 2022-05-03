@@ -43,16 +43,39 @@ namespace WindowsFormsApp1
                         read.GetValue(read.GetOrdinal("Priority_Level")),
                     });
                 }
+                
             }
+            
             connectionString.Close();
 
+            /*
+            -- CODE TO ADD Staff name - not working
+            string find_employee_first_name_statement = $"SELECT First_Name" +
+                $" FROM User_Information_Updated" +
+                $" RIGHT JOIN Bugs ON User_Information_Updated.User_ID = Bugs.Responible_User_ID" +
+                $" WHERE Bugs.Bug_ID = {user_id}";
 
+            string find_employee_last_name_statement = $"SELECT Last_Name" +
+                $" FROM User_Information_Updated" +
+                $" RIGHT JOIN Bugs ON User_Information_Updated.User_ID = Bugs.Responible_User_ID" +
+                $" WHERE Bugs.Bug_ID = {user_id}";
 
+            SqlCommand find_first = new SqlCommand(find_employee_first_name_statement, connectionString);
+            SqlCommand find_last = new SqlCommand(find_employee_last_name_statement, connectionString);
 
+            string First_Name;
+            string Last_Name;
 
-            label1.Text = "Viewing Bug for {First_Name} {Last_Name}";
+            connectionString.Open();
 
+            First_Name = find_first.ExecuteReader().ToString();
+            Last_Name = find_last.ExecuteReader().ToString();
 
+            connectionString.Close();
+
+            label1.Text = $"Viewing Bug for {First_Name} {Last_Name}";
+            */
+            label1.Visible = false;
         }
 
         private void button2_MouseClick(object sender, MouseEventArgs e)

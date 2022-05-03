@@ -34,14 +34,14 @@ namespace WindowsFormsApp1
             this._csci455_emrDataSet = new WindowsFormsApp1._csci455_emrDataSet();
             this.csci455emrDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.Bug_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Bug_Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Bug_Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date_of_creation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Projected_Completion_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Priority_Level = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._csci455_emrDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.csci455emrDataSetBindingSource)).BeginInit();
@@ -89,42 +89,6 @@ namespace WindowsFormsApp1
             this.button2.UseVisualStyleBackColor = false;
             this.button2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button2_MouseClick);
             // 
-            // Bug_ID
-            // 
-            this.Bug_ID.HeaderText = "Bug ID";
-            this.Bug_ID.Name = "Bug_ID";
-            this.Bug_ID.ReadOnly = true;
-            // 
-            // Bug_Status
-            // 
-            this.Bug_Status.HeaderText = "Bug Status";
-            this.Bug_Status.Name = "Bug_Status";
-            this.Bug_Status.ReadOnly = true;
-            // 
-            // Bug_Description
-            // 
-            this.Bug_Description.HeaderText = "Bug Description";
-            this.Bug_Description.Name = "Bug_Description";
-            this.Bug_Description.ReadOnly = true;
-            // 
-            // Date_of_creation
-            // 
-            this.Date_of_creation.HeaderText = "Date of Creation";
-            this.Date_of_creation.Name = "Date_of_creation";
-            this.Date_of_creation.ReadOnly = true;
-            // 
-            // Projected_Completion_Date
-            // 
-            this.Projected_Completion_Date.HeaderText = "Projected Completion Date";
-            this.Projected_Completion_Date.Name = "Projected_Completion_Date";
-            this.Projected_Completion_Date.ReadOnly = true;
-            // 
-            // Priority_Level
-            // 
-            this.Priority_Level.HeaderText = "Priority Level";
-            this.Priority_Level.Name = "Priority_Level";
-            this.Priority_Level.ReadOnly = true;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
@@ -147,6 +111,43 @@ namespace WindowsFormsApp1
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 10;
             this.label1.Text = "label1";
+            // 
+            // Bug_ID
+            // 
+            this.Bug_ID.HeaderText = "Bug ID";
+            this.Bug_ID.Name = "Bug_ID";
+            this.Bug_ID.ReadOnly = true;
+            // 
+            // Bug_Status
+            // 
+            this.Bug_Status.HeaderText = "Bug Status";
+            this.Bug_Status.Name = "Bug_Status";
+            this.Bug_Status.ReadOnly = true;
+            // 
+            // Bug_Description
+            // 
+            this.Bug_Description.HeaderText = "Bug Description";
+            this.Bug_Description.Name = "Bug_Description";
+            this.Bug_Description.ReadOnly = true;
+            this.Bug_Description.Width = 230;
+            // 
+            // Date_of_creation
+            // 
+            this.Date_of_creation.HeaderText = "Date of Creation";
+            this.Date_of_creation.Name = "Date_of_creation";
+            this.Date_of_creation.ReadOnly = true;
+            // 
+            // Projected_Completion_Date
+            // 
+            this.Projected_Completion_Date.HeaderText = "Projected Completion Date";
+            this.Projected_Completion_Date.Name = "Projected_Completion_Date";
+            this.Projected_Completion_Date.ReadOnly = true;
+            // 
+            // Priority_Level
+            // 
+            this.Priority_Level.HeaderText = "Priority Level";
+            this.Priority_Level.Name = "Priority_Level";
+            this.Priority_Level.ReadOnly = true;
             // 
             // Staff_Bugs
             // 
@@ -174,13 +175,13 @@ namespace WindowsFormsApp1
         private _csci455_emrDataSet _csci455_emrDataSet;
         private System.Windows.Forms.BindingSource csci455emrDataSetBindingSource;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Bug_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Bug_Status;
         private System.Windows.Forms.DataGridViewTextBoxColumn Bug_Description;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date_of_creation;
         private System.Windows.Forms.DataGridViewTextBoxColumn Projected_Completion_Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn Priority_Level;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
     }
 }

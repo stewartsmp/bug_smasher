@@ -120,7 +120,7 @@ namespace WindowsFormsApp1
                             break;
                         case "Manager":
                             welcome_message();
-                            Manager_view mv = new Manager_view();
+                            Manager_view mv = new Manager_view(Logon.user_id);
                             
                             mv.Show();
                             this.Hide();
