@@ -91,5 +91,17 @@ namespace WindowsFormsApp1
             mg.Show();
             this.Hide();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+                int Bug_id = Convert.ToInt32(row.Cells["Bug_ID"].Value);
+                AlterBug_Manager abm = new AlterBug_Manager(Bug_id);
+                abm.Show();
+                this.Hide();
+            }
+        }
     }
 }
