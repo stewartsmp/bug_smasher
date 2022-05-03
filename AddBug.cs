@@ -47,7 +47,7 @@ namespace WindowsFormsApp1
             connectionString.Close();
 
             this.Close();
-            Manager_view mv = new Manager_view();
+            Manager_view mv = new Manager_view(Logon.user_id);
             mv.Show();
         }
 

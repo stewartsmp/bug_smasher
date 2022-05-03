@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
         static Microsoft.Data.SqlClient.SqlConnection connectionString = new Microsoft.Data.SqlClient.SqlConnection(@"Data Source = csci455-emr.database.windows.net; Initial Catalog = csci455-emr; User ID = SuperUser; Password=Pword123!;Connect Timeout = 30; Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
         static string manager_name_first = Logon.user_first_name;
         static string manager_name_last = Logon.user_last_name;
-        public Manager_view()
+        public Manager_view(int user_id)
         {
             InitializeComponent();
             this.Text = ($"Logged in as {manager_name_first} {manager_name_last}");
@@ -165,8 +165,8 @@ namespace WindowsFormsApp1
             table.Columns.Add("Last_Name", typeof(string));
             table.Rows.Add("All");
             employees_managed.Tables.Add(table);
-            comboBox1.DataSource = employees_managed.Tables[0];
-            comboBox1.DisplayMember = "Last_Name";
+            //comboBox1.DataSource = employees_managed.Tables[0];
+            //comboBox1.DisplayMember = "Last_Name";
             //comboBox1.ValueMember = "Last_Name";
 
             connectionString.Close();
@@ -203,6 +203,19 @@ namespace WindowsFormsApp1
         private void pieChart1_ChildChanged(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+                int user_id = Convert.ToInt32(row.Cells["User_ID"].Value);
+                Staff_Bugs sg = new Staff_Bugs(user_id);
+                sg.Show();
+                this.Hide();
+
+            }
         }
     }
 }

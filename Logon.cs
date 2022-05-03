@@ -112,8 +112,8 @@ namespace WindowsFormsApp1
                     {
                         case "Developer":
                             welcome_message();
-                            Staff_view sv = new Staff_view();
-                            
+                            Staff_view sv = new Staff_view(Logon.user_id);
+                           
                             sv.Show();
                             this.Hide();
                             //Console.WriteLine(Logon.username + " is a Developer");
